@@ -13,7 +13,7 @@ const client = new Client({
 client.once("ready", () => {
     console.log(`${client.user.tag} est connecté !`);
     // Mise à jour de la présence du bot avec la version du package.json
-    client.user.setPresence({ activities: [{ name: `la version ${require(`${process.cwd()}/package.json`).version}`, type: ActivityType.Watching }], status: 'idle' });
+    client.user.setPresence({ activities: [{ name: `la version ${require(`${process.cwd()}/package.json`).version}`, type: ActivityType.Watching }], status: 'idle' }); //online(Enligne)/dnd(Ne pas déranger)/idle(Inactif)/invisible(Invisible)
 });
 
 // Chargement de la configuration depuis un fichier externe
