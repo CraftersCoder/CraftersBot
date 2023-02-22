@@ -12,6 +12,6 @@ client.once("ready", () => {
     client.user.setPresence({ activities: [{ name: `la version ${require(`${process.cwd()}/package.json`).version}`, type: ActivityType.Watching }], status: 'idle' })
 })
 
-client.config = require('./config.json');
+client.config = require('./config.js');
 
 client.login(client.config.BOT.TOKEN)
